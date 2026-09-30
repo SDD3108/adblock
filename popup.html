@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>AdBlock</title><link rel="stylesheet" href="ui.css"><link rel="stylesheet" href="popup.css"></head>
+<body class="popup">
+<header class="brand-header">
+  <img src="icons/48.png" alt=""><h1><strong>Ad</strong>Block</h1>
+  <nav class="header-tools" aria-label="Меню">
+    <button id="help" class="tool-button" title="Help" aria-label="Help" aria-controls="answers-view" aria-expanded="false"><span class="help-symbol">?</span></button>
+    <button id="settings" class="tool-button" title="Settings" aria-label="Settings"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m20.1 13.8 1.5 1.2-1.5 2.6-1.8-.7a8 8 0 0 1-2 1.2l-.3 1.9h-3l-.3-1.9a8 8 0 0 1-2-1.2l-1.8.7L7.4 15l1.5-1.2a8 8 0 0 1 0-2.3L7.4 10l1.5-2.6 1.8.7a8 8 0 0 1 2-1.2L13 5h3l.3 1.9a8 8 0 0 1 2 1.2l1.8-.7 1.5 2.6-1.5 1.5a8 8 0 0 1 0 2.3ZM14.5 9a3.6 3.6 0 1 0 0 7.2 3.6 3.6 0 0 0 0-7.2Z" transform="translate(-2 -1)"/></svg></button>
+    <button id="more" class="tool-button" title="More" aria-label="More" aria-controls="more-menu" aria-expanded="false">⋮</button>
+  </nav>
+  <div id="more-menu" class="more-menu" hidden><button id="menu-settings">Settings</button><button id="menu-close">Close</button></div>
+</header>
+<section id="home-view">
+  <div class="vpn-banner" id="vpn-banner"><span class="new-label">New</span><span>Introducing AdBlock VPN</span><button id="dismiss-banner" title="Dismiss" aria-label="Dismiss">×</button></div>
+  <main class="site-card">
+    <h2 id="site-name">Current website</h2>
+    <div class="block-card"><div class="block-title"><img src="icons/48.png" alt=""><span>Block Ads</span></div><div class="counters"><span><b>0</b> on this page</span><span><b>25,041</b> in total</span></div></div>
+    <div class="feature-row"><span class="lock" aria-hidden="true"></span><span>Skip Cookie Walls</span><button class="learn-more" data-feature="Skip Cookie Walls">Learn More</button></div>
+    <div class="feature-row"><span class="lock" aria-hidden="true"></span><span>Block Distractions</span><button class="learn-more" data-feature="Block Distractions">Learn More</button></div>
+    <button id="pause" class="pause-button" aria-pressed="false"><span id="pause-symbol" aria-hidden="true">Ⅱ</span><span id="pause-label">Pause on this site</span></button>
+  </main>
+</section>
+<section id="answers-view" hidden>
+  <main class="answers-main"><div class="answer-heading"><button id="back" aria-label="Назад">← Назад</button><span class="pill" id="shortcut">⇧⌘S · выделить область</span></div><div id="status" role="status">Готово к работе</div><div id="answer">Выдели вопрос на странице, затем открой этот раздел, чтобы прочитать ответ.</div><div class="actions"><button class="primary" id="capture">Выделить область</button><button id="copy" disabled>Копировать</button><button id="clear" title="Удалить ответ">Очистить</button></div></main>
+  <footer>Esc — вернуться на главный экран</footer>
+</section>
+<dialog id="feature-dialog"><h2 id="feature-title"></h2><p>This feature is not available in this personal build.</p><button id="close-dialog">Close</button></dialog>
+<script type="module" src="popup.js"></script>
+</body></html>
